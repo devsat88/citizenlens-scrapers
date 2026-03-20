@@ -1,0 +1,27 @@
+category: railways
+cities: all
+description: Railway station data, train data
+fetch:
+  method: GET
+  type: api
+  url: https://data.gov.in/
+load:
+  table: railway_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Datagov Railways
+parse:
+  columns: {}
+  type: json
+refresh_frequency: quarterly
+tier: 1
+transform:
+  _add_fields:
+    category: railways
+    source_portal: datagov_railways
+validate:
+  required: []

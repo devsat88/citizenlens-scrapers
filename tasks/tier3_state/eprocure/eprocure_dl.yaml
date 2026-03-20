@@ -1,0 +1,28 @@
+category: roads
+cities:
+- DEL
+description: State eProcurement portal for Delhi
+fetch:
+  method: GET
+  type: html
+  url: https://govtprocurement.delhi.gov.in
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: eProcure Delhi
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: weekly
+tier: 3
+transform:
+  _add_fields:
+    category: roads
+    source_portal: eprocure_dl
+validate:
+  required: []

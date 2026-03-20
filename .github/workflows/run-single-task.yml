@@ -1,0 +1,56 @@
+name: Run Single Task
+
+on:
+  workflow_dispatch:
+    inputs:
+      task_file:
+        description: "Path to task YAML file (e.g. tasks/tier1_structured/pmgsy_api.yaml)"
+        required: true
+        type: string
+      mode:
+        description: "Run mode"
+        required: true
+        type: choice
+        options: [dry_run, staging, production]
+        default: dry_run
+
+jobs:
+  run-single-task:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    env:
+      SUPABASE_URL: ${{ github.event.inputs.mode != 'dry_run' && secrets.SUPABASE_URL || '' }}
+      SUPABASE_SERVICE_KEY: ${{ github.event.inputs.mode != 'dry_run' && secrets.SUPABASE_SERVICE_KEY || '' }}
+      AWS_ACCESS_KEY_ID: ${{ github.event.inputs.mode != 'dry_run' && secrets.AWS_ACCESS_KEY_ID || '' }}
+      AWS_SECRET_ACCESS_KEY: ${{ github.event.inputs.mode != 'dry_run' && secrets.AWS_SECRET_ACCESS_KEY || '' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run task
+        run: python run_task.py ${{ github.event.inputs.task_file }} --mode ${{ github.event.inputs.mode }}
+
+      - name: Upload output artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-task-output-${{ github.run_id }}
+          path: output/
+          retention-days: 30
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-task-logs-${{ github.run_id }}
+          path: logs/
+          retention-days: 30

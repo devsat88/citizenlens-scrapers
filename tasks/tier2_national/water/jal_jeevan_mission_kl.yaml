@@ -1,0 +1,29 @@
+category: water
+cities: all
+description: Water projects, household connections, spending — Kerala
+fetch:
+  method: GET
+  params:
+    state_code: KL
+  type: api
+  url: https://ejalshakti.gov.in/jjmreport/
+load:
+  table: water_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Jal Jeevan Mission Kerala
+parse:
+  columns: {}
+  type: json
+refresh_frequency: monthly
+tier: 2
+transform:
+  _add_fields:
+    category: water
+    source_portal: jal_jeevan_mission
+validate:
+  required: []

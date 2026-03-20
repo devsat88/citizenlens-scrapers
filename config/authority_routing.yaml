@@ -1,0 +1,163 @@
+# config/authority_routing.yaml
+# Maps complaint category → department, national portals, escalation path
+
+categories:
+  roads_pothole:
+    display_name: "Roads & Potholes"
+    department: "Public Works Department"
+    national_portals:
+      - name: Meri Sadak
+        url: https://merisadak.gov.in/
+        helpline: "1800-111-600"
+        description: "For PMGSY rural roads"
+      - name: CPGRAMS
+        url: https://pgportal.gov.in/
+        helpline: null
+        description: "Central government grievance portal"
+      - name: NHAI Grievance
+        url: https://nhai.gov.in/grievance
+        helpline: "1033"
+        description: "For national highways only"
+    escalation:
+      day_7:
+        target: ward_corporator
+        action: "Tweet + email to ward corporator"
+      day_14:
+        target: municipal_commissioner
+        action: "Escalate to municipal commissioner + file on CPGRAMS"
+      day_21:
+        target: cm_office
+        action: "Tag CM office on X + file RTI"
+
+  garbage_sanitation:
+    display_name: "Garbage & Sanitation"
+    department: "Health Department / SWM"
+    national_portals:
+      - name: Swachhata App
+        url: https://swachhata.gov.in/
+        helpline: "14420"
+        description: "MoHUA sanitation complaints"
+    escalation:
+      day_7:
+        target: ward_sanitary_inspector
+        action: "Tweet to municipal body"
+      day_14:
+        target: health_officer
+        action: "Escalate to Health Officer + CPGRAMS"
+      day_21:
+        target: cm_office
+        action: "Tag CM office + District Collector"
+
+  water_drainage:
+    display_name: "Water & Drainage"
+    department: "Water Board / Water Supply Department"
+    national_portals:
+      - name: Jal Shakti
+        url: https://jalshakti-ddws.gov.in/
+        helpline: null
+        description: "Ministry of Jal Shakti"
+    escalation:
+      day_7:
+        target: zone_engineer
+        action: "Contact water board zone office"
+      day_14:
+        target: water_board_chief_engineer
+        action: "Escalate to water board head"
+      day_21:
+        target: cm_office
+        action: "Tag CM + District Collector"
+
+  railways:
+    display_name: "Railways"
+    department: "Indian Railways"
+    national_portals:
+      - name: Rail Madad
+        url: https://railmadad.indianrailways.gov.in/
+        helpline: "139"
+        description: "Railway complaint portal"
+      - name: IRCTC
+        url: https://www.irctc.co.in/
+        helpline: "14646"
+        description: "Ticket and catering issues"
+    escalation:
+      day_7:
+        target: station_master
+        action: "Contact station master + tweet railway handle"
+      day_14:
+        target: divisional_railway_manager
+        action: "Escalate to DRM + Railway Board"
+      day_21:
+        target: railway_minister
+        action: "Tag @RailMinIndia + file CPGRAMS"
+
+  streetlights:
+    display_name: "Streetlights & Electrical"
+    department: "Electrical Wing / Municipal"
+    national_portals: []
+    escalation:
+      day_7:
+        target: zone_electrical_engineer
+        action: "Contact municipal electrical wing"
+      day_14:
+        target: municipal_commissioner
+        action: "Escalate to commissioner + DISCOM complaint"
+      day_21:
+        target: cm_office
+        action: "Tag CM office"
+
+  traffic:
+    display_name: "Traffic Violations"
+    department: "Traffic Police"
+    national_portals:
+      - name: eChallan
+        url: https://echallan.parivahan.gov.in/
+        helpline: null
+        description: "Traffic violation portal"
+      - name: Vahan
+        url: https://vahan.parivahan.gov.in/
+        helpline: null
+        description: "Vehicle registration lookup"
+    escalation:
+      day_7:
+        target: traffic_inspector
+        action: "Tweet to traffic police handle"
+      day_14:
+        target: traffic_commissioner
+        action: "Escalate to DCP Traffic"
+      day_21:
+        target: cm_office
+        action: "Tag CM + Home Minister"
+
+  parks:
+    display_name: "Parks & Playgrounds"
+    department: "Garden Department / Municipal"
+    national_portals: []
+    escalation:
+      day_7:
+        target: garden_superintendent
+        action: "Contact municipal garden dept"
+      day_14:
+        target: municipal_commissioner
+        action: "Escalate to commissioner"
+      day_21:
+        target: cm_office
+        action: "Tag CM office"
+
+  encroachment:
+    display_name: "Encroachment"
+    department: "Anti-Encroachment Cell / Town Planning"
+    national_portals:
+      - name: CPGRAMS
+        url: https://pgportal.gov.in/
+        helpline: null
+        description: "For public land encroachment"
+    escalation:
+      day_7:
+        target: ward_officer
+        action: "Contact anti-encroachment cell"
+      day_14:
+        target: municipal_commissioner
+        action: "File CPGRAMS + District Collector"
+      day_21:
+        target: cm_office
+        action: "Tag CM + file RTI on land records"

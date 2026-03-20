@@ -1,0 +1,27 @@
+category: cross_category
+cities: all
+description: Central govt procurement orders
+fetch:
+  method: GET
+  type: html
+  url: https://gem.gov.in/
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Gem Portal
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: weekly
+tier: 2
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: gem_portal
+validate:
+  required: []

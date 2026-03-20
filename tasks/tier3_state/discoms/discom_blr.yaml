@@ -1,0 +1,28 @@
+category: streetlights
+cities:
+- BLR
+description: Streetlight data from electricity provider BESCOM
+fetch:
+  method: GET
+  type: html
+  url: https://bescom.karnataka.gov.in/
+load:
+  table: streetlight_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: DISCOM BESCOM
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: quarterly
+tier: 3
+transform:
+  _add_fields:
+    category: streetlights
+    source_portal: discom_blr
+validate:
+  required: []

@@ -1,0 +1,39 @@
+name: Weekly Refresh
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # Monday 2:00 AM UTC / 7:30 AM IST
+  workflow_dispatch:
+
+jobs:
+  refresh-weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run weekly refresh
+        run: python run_tier.py --refresh weekly --mode production --parallel 4
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-refresh-logs-${{ github.run_id }}
+          path: logs/
+          retention-days: 30

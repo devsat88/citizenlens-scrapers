@@ -1,0 +1,35 @@
+category: cross_category
+cities:
+- DEL
+- BLR
+- CHN
+- HYD
+- PUN
+- AMD
+- TVM
+- KCH
+description: Per-city project lists (all categories)
+fetch:
+  method: GET
+  type: html
+  url: https://smartcities.gov.in/
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Smartcities Gov
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 2
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: smartcities_gov
+validate:
+  required: []

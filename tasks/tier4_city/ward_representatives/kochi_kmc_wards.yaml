@@ -1,0 +1,28 @@
+category: cross_category
+cities:
+- KCH
+description: Kochi Corporation ward councillors and representatives
+fetch:
+  method: GET
+  type: html
+  url: https://kochicorporation.lsgkerala.gov.in/en
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Kochi Kmc Wards
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: kochi_kmc_wards
+validate:
+  required: []

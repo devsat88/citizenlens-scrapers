@@ -1,0 +1,29 @@
+category: roads
+cities: all
+description: Rural road projects with contractor data — Kerala
+fetch:
+  method: GET
+  params:
+    state_code: KL
+  type: html
+  url: https://omms.nic.in/
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Pmgsy Omms Kerala
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 2
+transform:
+  _add_fields:
+    category: roads
+    source_portal: pmgsy_omms
+validate:
+  required: []

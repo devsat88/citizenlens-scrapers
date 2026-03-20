@@ -1,0 +1,28 @@
+category: roads
+cities:
+- HYD
+description: Public Works Department road projects for Telangana
+fetch:
+  method: GET
+  type: html
+  url: https://roads.telangana.gov.in/
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: PWD Telangana
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 3
+transform:
+  _add_fields:
+    category: roads
+    source_portal: pwd_ts
+validate:
+  required: []

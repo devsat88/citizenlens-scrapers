@@ -1,0 +1,27 @@
+category: garbage
+cities: all
+description: Swachh Survekshan dashboard API (inspect network for JSON endpoints)
+fetch:
+  method: GET
+  type: api
+  url: https://ss2024.sbmurban.org/
+load:
+  table: garbage_contractors
+  unique_key:
+  - city_code
+  - contractor_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Ss Dashboard Api
+parse:
+  columns: {}
+  type: json
+refresh_frequency: annual
+tier: 1
+transform:
+  _add_fields:
+    category: garbage
+    source_portal: ss_dashboard_api
+validate:
+  required: []

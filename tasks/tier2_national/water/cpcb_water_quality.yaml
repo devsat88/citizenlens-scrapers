@@ -1,0 +1,27 @@
+category: water
+cities: all
+description: Water quality monitoring data
+fetch:
+  method: GET
+  type: pdf
+  url: https://cpcb.nic.in/water-quality/
+load:
+  table: water_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Cpcb Water Quality
+parse:
+  columns: {}
+  type: pdf_table
+refresh_frequency: quarterly
+tier: 2
+transform:
+  _add_fields:
+    category: water
+    source_portal: cpcb_water_quality
+validate:
+  required: []

@@ -1,0 +1,27 @@
+category: railways
+cities: all
+description: Station redevelopment projects
+fetch:
+  method: GET
+  type: html
+  url: https://irsdc.in/
+load:
+  table: railway_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Irsdc Projects
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: quarterly
+tier: 2
+transform:
+  _add_fields:
+    category: railways
+    source_portal: irsdc_projects
+validate:
+  required: []

@@ -1,0 +1,28 @@
+category: water
+cities:
+- KOL
+description: Water board projects and quality data for KOL
+fetch:
+  method: GET
+  type: html
+  url: https://www.kmcgov.in
+load:
+  table: water_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Water Board KOL
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 3
+transform:
+  _add_fields:
+    category: water
+    source_portal: water_board_kol
+validate:
+  required: []

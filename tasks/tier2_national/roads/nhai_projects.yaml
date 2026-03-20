@@ -1,0 +1,27 @@
+category: roads
+cities: all
+description: National highway projects
+fetch:
+  method: GET
+  type: html
+  url: https://nhai.gov.in/road-information
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Nhai Projects
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 2
+transform:
+  _add_fields:
+    category: roads
+    source_portal: nhai_projects
+validate:
+  required: []

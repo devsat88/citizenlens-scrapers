@@ -1,0 +1,27 @@
+category: water
+cities: all
+description: Water quality, JJM household data
+fetch:
+  method: GET
+  type: api
+  url: https://data.gov.in/
+load:
+  table: water_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Datagov Water
+parse:
+  columns: {}
+  type: json
+refresh_frequency: monthly
+tier: 1
+transform:
+  _add_fields:
+    category: water
+    source_portal: datagov_water
+validate:
+  required: []

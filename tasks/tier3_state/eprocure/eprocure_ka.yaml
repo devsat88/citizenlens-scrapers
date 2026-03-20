@@ -1,0 +1,28 @@
+category: roads
+cities:
+- BLR
+description: State eProcurement portal for Karnataka
+fetch:
+  method: GET
+  type: aspnet
+  url: https://eproc.karnataka.gov.in
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: eProcure Karnataka
+parse:
+  columns: {}
+  type: aspnet_form
+refresh_frequency: weekly
+tier: 3
+transform:
+  _add_fields:
+    category: roads
+    source_portal: eprocure_ka
+validate:
+  required: []

@@ -1,0 +1,28 @@
+category: cross_category
+cities:
+- KCH
+description: Cochin Smart Mission Limited project list
+fetch:
+  method: GET
+  type: html
+  url: https://csml.co.in/
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Kochi Csml
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: kochi_csml
+validate:
+  required: []

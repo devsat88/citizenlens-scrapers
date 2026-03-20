@@ -1,0 +1,61 @@
+name: Dry Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      tier:
+        description: "Tier to run"
+        required: true
+        type: choice
+        options: ['1', '2', '3', '4']
+      category:
+        description: "Category filter (optional)"
+        required: false
+        type: choice
+        options: ['', 'roads', 'garbage', 'water', 'railways', 'streetlights', 'cross_category']
+        default: ''
+      city:
+        description: "City filter (optional)"
+        required: false
+        type: choice
+        options: ['', 'MUM', 'DEL', 'BLR', 'CHN', 'HYD', 'PUN', 'KOL', 'AMD', 'TVM', 'KCH']
+        default: ''
+
+jobs:
+  dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build and run command
+        run: |
+          CMD="python run_tier.py --tier ${{ github.event.inputs.tier }} --mode dry_run --parallel 4"
+          if [ -n "${{ github.event.inputs.category }}" ]; then CMD="$CMD --category ${{ github.event.inputs.category }}"; fi
+          if [ -n "${{ github.event.inputs.city }}" ]; then CMD="$CMD --city ${{ github.event.inputs.city }}"; fi
+          $CMD
+
+      - name: Upload output artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-output-tier${{ github.event.inputs.tier }}
+          path: output/
+          retention-days: 30
+
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-logs-tier${{ github.event.inputs.tier }}
+          path: logs/
+          retention-days: 30

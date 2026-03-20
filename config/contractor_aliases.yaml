@@ -1,0 +1,46 @@
+# Canonical contractor name mappings.
+# Keys are lowercase patterns; values are canonical display names.
+# The name_normalizer tries exact match first, then fuzzy match.
+
+aliases:
+  "l&t": "Larsen & Toubro Ltd"
+  "l and t": "Larsen & Toubro Ltd"
+  "larsen & toubro": "Larsen & Toubro Ltd"
+  "larsen and toubro": "Larsen & Toubro Ltd"
+  "larsen & toubro ltd": "Larsen & Toubro Ltd"
+  "larsen and toubro limited": "Larsen & Toubro Ltd"
+  "l&t ltd": "Larsen & Toubro Ltd"
+
+  "hcc": "Hindustan Construction Company Ltd"
+  "hindustan construction": "Hindustan Construction Company Ltd"
+  "hindustan construction company": "Hindustan Construction Company Ltd"
+  "hindustan construction co": "Hindustan Construction Company Ltd"
+
+  "ncc": "NCC Ltd"
+  "ncc limited": "NCC Ltd"
+  "nagarjuna construction": "NCC Ltd"
+  "nagarjuna construction company": "NCC Ltd"
+
+  "ircon": "IRCON International Ltd"
+  "ircon intl": "IRCON International Ltd"
+  "ircon international": "IRCON International Ltd"
+  "ircon international limited": "IRCON International Ltd"
+
+  "afcons": "Afcons Infrastructure Ltd"
+  "afcons infrastructure": "Afcons Infrastructure Ltd"
+
+  "rvnl": "Rail Vikas Nigam Ltd"
+  "rail vikas nigam": "Rail Vikas Nigam Ltd"
+
+  "nbcc": "NBCC (India) Ltd"
+  "nbcc india": "NBCC (India) Ltd"
+  "national buildings construction": "NBCC (India) Ltd"
+
+  "tata projects": "Tata Projects Ltd"
+  "tata project": "Tata Projects Ltd"
+
+  "gammon": "Gammon India Ltd"
+  "gammon india": "Gammon India Ltd"
+
+  "simplex": "Simplex Infrastructures Ltd"
+  "simplex infrastructures": "Simplex Infrastructures Ltd"

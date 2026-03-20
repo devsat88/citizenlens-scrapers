@@ -1,0 +1,28 @@
+category: garbage
+cities:
+- TVM
+description: TMC solid waste management contractor data
+fetch:
+  method: GET
+  type: html
+  url: https://tmc.lsgkerala.gov.in/en/home
+load:
+  table: garbage_contractors
+  unique_key:
+  - city_code
+  - contractor_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Trivandrum Tmc Swm
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: garbage
+    source_portal: trivandrum_tmc_swm
+validate:
+  required: []

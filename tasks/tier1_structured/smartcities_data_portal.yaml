@@ -1,0 +1,35 @@
+category: cross_category
+cities:
+- DEL
+- BLR
+- CHN
+- HYD
+- PUN
+- AMD
+- TVM
+- KCH
+description: 3,566 datasets from 100 Smart Cities
+fetch:
+  method: GET
+  type: csv
+  url: https://smartcities.data.gov.in/
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Smartcities Data Portal
+parse:
+  columns: {}
+  type: csv
+refresh_frequency: monthly
+tier: 1
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: smartcities_data_portal
+validate:
+  required: []

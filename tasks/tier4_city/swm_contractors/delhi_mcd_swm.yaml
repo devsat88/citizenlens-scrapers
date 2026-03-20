@@ -1,0 +1,28 @@
+category: garbage
+cities:
+- DEL
+description: MCD solid waste management contractor data
+fetch:
+  method: GET
+  type: html
+  url: https://mcdonline.nic.in
+load:
+  table: garbage_contractors
+  unique_key:
+  - city_code
+  - contractor_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Delhi Mcd Swm
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: garbage
+    source_portal: delhi_mcd_swm
+validate:
+  required: []

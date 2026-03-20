@@ -1,0 +1,59 @@
+# config/tier1_urls.yaml
+# Tier 1: Structured Data (CSV/API — Scrape FIRST)
+tier1_structured:
+  - id: opencity_swachh_survekshan
+    url: https://data.opencity.in/dataset/swachh-survekshan-ss-results
+    format: csv_download
+    description: Swachh Survekshan city rankings as CSV
+    cities: all
+    category: garbage
+    refresh: annual
+
+  - id: smartcities_data_portal
+    url: https://smartcities.data.gov.in/
+    format: csv_api
+    description: 3,566 datasets from 100 Smart Cities
+    cities: [DEL, BLR, CHN, HYD, PUN, AMD, TVM, KCH]  # Mumbai/Kolkata withdrew
+    category: cross_category
+    refresh: monthly
+
+  - id: datagov_roads
+    url: https://data.gov.in/
+    format: json_api
+    api_base: https://api.data.gov.in/resource/
+    description: Road length statistics, PMGSY data
+    cities: all
+    category: roads
+    refresh: quarterly
+
+  - id: datagov_railways
+    url: https://data.gov.in/
+    format: json_api
+    description: Railway station data, train data
+    cities: all
+    category: railways
+    refresh: quarterly
+
+  - id: datagov_water
+    url: https://data.gov.in/
+    format: json_api
+    description: Water quality, JJM household data
+    cities: all
+    category: water
+    refresh: monthly
+
+  - id: opencity_budgets
+    url: https://data.opencity.in/
+    format: csv_download
+    description: City budget data, road statistics
+    cities: all
+    category: cross_category
+    refresh: annual
+
+  - id: ss_dashboard_api
+    url: https://ss2024.sbmurban.org/
+    format: json_api
+    description: Swachh Survekshan dashboard API (inspect network for JSON endpoints)
+    cities: all
+    category: garbage
+    refresh: annual

@@ -1,0 +1,281 @@
+# config/tier4_urls.yaml
+# Tier 4: City Municipal Portals
+tier4_city:
+  swm_contractors:
+    MUM:
+      id: mumbai_bmc_swm
+      url: "https://portal.mcgm.gov.in"
+      cities: [MUM]
+      format: html_table
+      category: garbage
+      description: BMC solid waste management contractor data
+    DEL:
+      id: delhi_mcd_swm
+      url: "https://mcdonline.nic.in"
+      cities: [DEL]
+      format: html_table
+      category: garbage
+      description: MCD solid waste management contractor data
+    BLR:
+      id: bangalore_bbmp_swm
+      url: "https://bbmp.gov.in"
+      cities: [BLR]
+      format: html_table
+      category: garbage
+      description: BBMP solid waste management contractor data
+    CHN:
+      id: chennai_gcc_swm
+      url: "https://chennaicorporation.gov.in"
+      cities: [CHN]
+      format: html_table
+      category: garbage
+      description: GCC solid waste management contractor data
+    HYD:
+      id: hyderabad_ghmc_swm
+      url: "https://www.ghmc.gov.in"
+      cities: [HYD]
+      format: html_table
+      category: garbage
+      description: GHMC solid waste management contractor data
+    PUN:
+      id: pune_pmc_swm
+      url: "https://www.pmc.gov.in"
+      cities: [PUN]
+      format: html_table
+      category: garbage
+      description: PMC solid waste management contractor data
+    KOL:
+      id: kolkata_kmc_swm
+      url: "https://www.kmcgov.in"
+      cities: [KOL]
+      format: html_table
+      category: garbage
+      description: KMC solid waste management contractor data
+    AMD:
+      id: ahmedabad_amc_swm
+      url: "https://ahmedabadcity.gov.in"
+      cities: [AMD]
+      format: html_table
+      category: garbage
+      description: AMC solid waste management contractor data
+    TVM:
+      id: trivandrum_tmc_swm
+      url: "https://tmc.lsgkerala.gov.in/en/home"
+      cities: [TVM]
+      format: html_table
+      category: garbage
+      description: TMC solid waste management contractor data
+    KCH:
+      id: kochi_kmc_swm
+      url: "https://kochicorporation.lsgkerala.gov.in/en"
+      cities: [KCH]
+      format: html_table
+      category: garbage
+      description: Kochi Corporation solid waste management contractor data
+
+  smart_city_spv:
+    # Mumbai and Kolkata withdrew from Smart Cities Mission — excluded
+    DEL:
+      id: delhi_smartcity
+      url: "https://delhismartcity.in/"
+      cities: [DEL]
+      format: html_table
+      category: cross_category
+      description: Delhi Smart City SPV project list
+    BLR:
+      id: bangalore_bscl
+      url: "https://bengaluruscl.com/"
+      cities: [BLR]
+      format: html_table
+      category: cross_category
+      description: Bengaluru Smart City Limited project list
+    CHN:
+      id: chennai_smartcity
+      url: "https://chennaismartcity.in/"
+      cities: [CHN]
+      format: html_table
+      category: cross_category
+      description: Chennai Smart City project list
+    HYD:
+      id: hyderabad_smartcity
+      url: "https://smartcities.gov.in/"
+      cities: [HYD]
+      format: html_table
+      category: cross_category
+      description: Hyderabad Smart City projects via national portal
+      extra_params:
+        city_filter: Hyderabad
+    PUN:
+      id: pune_smartcity
+      url: "https://punesmartcity.in/"
+      cities: [PUN]
+      format: html_table
+      category: cross_category
+      description: Pune Smart City project list
+    AMD:
+      id: ahmedabad_smartcity
+      url: "https://smartcities.gov.in/"
+      cities: [AMD]
+      format: html_table
+      category: cross_category
+      description: Ahmedabad Smart City projects via national portal
+      extra_params:
+        city_filter: Ahmedabad
+    TVM:
+      id: trivandrum_sctl
+      url: "https://www.smartcitytvm.in/"
+      cities: [TVM]
+      format: html_table
+      category: cross_category
+      description: Smart City Thiruvananthapuram Ltd project list
+    KCH:
+      id: kochi_csml
+      url: "https://csml.co.in/"
+      cities: [KCH]
+      format: html_table
+      category: cross_category
+      description: Cochin Smart Mission Limited project list
+
+  ward_representatives:
+    MUM:
+      id: mumbai_bmc_wards
+      url: "https://portal.mcgm.gov.in"
+      cities: [MUM]
+      format: html_table
+      category: cross_category
+      description: BMC ward councillors and representatives
+    DEL:
+      id: delhi_mcd_wards
+      url: "https://mcdonline.nic.in"
+      cities: [DEL]
+      format: html_table
+      category: cross_category
+      description: MCD ward councillors and representatives
+    BLR:
+      id: bangalore_bbmp_wards
+      url: "https://bbmp.gov.in"
+      cities: [BLR]
+      format: html_table
+      category: cross_category
+      description: BBMP ward councillors and representatives
+    CHN:
+      id: chennai_gcc_wards
+      url: "https://chennaicorporation.gov.in"
+      cities: [CHN]
+      format: html_table
+      category: cross_category
+      description: GCC ward councillors and representatives
+    HYD:
+      id: hyderabad_ghmc_wards
+      url: "https://www.ghmc.gov.in"
+      cities: [HYD]
+      format: html_table
+      category: cross_category
+      description: GHMC ward councillors and representatives
+    PUN:
+      id: pune_pmc_wards
+      url: "https://www.pmc.gov.in"
+      cities: [PUN]
+      format: html_table
+      category: cross_category
+      description: PMC ward councillors and representatives
+    KOL:
+      id: kolkata_kmc_wards
+      url: "https://www.kmcgov.in"
+      cities: [KOL]
+      format: html_table
+      category: cross_category
+      description: KMC ward councillors and representatives
+    AMD:
+      id: ahmedabad_amc_wards
+      url: "https://ahmedabadcity.gov.in"
+      cities: [AMD]
+      format: html_table
+      category: cross_category
+      description: AMC ward councillors and representatives
+    TVM:
+      id: trivandrum_tmc_wards
+      url: "https://tmc.lsgkerala.gov.in/en/home"
+      cities: [TVM]
+      format: html_table
+      category: cross_category
+      description: TMC ward councillors and representatives
+    KCH:
+      id: kochi_kmc_wards
+      url: "https://kochicorporation.lsgkerala.gov.in/en"
+      cities: [KCH]
+      format: html_table
+      category: cross_category
+      description: Kochi Corporation ward councillors and representatives
+
+  authority_contacts:
+    MUM:
+      id: mumbai_bmc_contacts
+      url: "https://portal.mcgm.gov.in"
+      cities: [MUM]
+      format: html_table
+      category: cross_category
+      description: BMC department contacts, helplines, emails
+    DEL:
+      id: delhi_mcd_contacts
+      url: "https://mcdonline.nic.in"
+      cities: [DEL]
+      format: html_table
+      category: cross_category
+      description: MCD department contacts, helplines, emails
+    BLR:
+      id: bangalore_bbmp_contacts
+      url: "https://bbmp.gov.in"
+      cities: [BLR]
+      format: html_table
+      category: cross_category
+      description: BBMP department contacts, helplines, emails
+    CHN:
+      id: chennai_gcc_contacts
+      url: "https://chennaicorporation.gov.in"
+      cities: [CHN]
+      format: html_table
+      category: cross_category
+      description: GCC department contacts, helplines, emails
+    HYD:
+      id: hyderabad_ghmc_contacts
+      url: "https://www.ghmc.gov.in"
+      cities: [HYD]
+      format: html_table
+      category: cross_category
+      description: GHMC department contacts, helplines, emails
+    PUN:
+      id: pune_pmc_contacts
+      url: "https://www.pmc.gov.in"
+      cities: [PUN]
+      format: html_table
+      category: cross_category
+      description: PMC department contacts, helplines, emails
+    KOL:
+      id: kolkata_kmc_contacts
+      url: "https://www.kmcgov.in"
+      cities: [KOL]
+      format: html_table
+      category: cross_category
+      description: KMC department contacts, helplines, emails
+    AMD:
+      id: ahmedabad_amc_contacts
+      url: "https://ahmedabadcity.gov.in"
+      cities: [AMD]
+      format: html_table
+      category: cross_category
+      description: AMC department contacts, helplines, emails
+    TVM:
+      id: trivandrum_tmc_contacts
+      url: "https://tmc.lsgkerala.gov.in/en/home"
+      cities: [TVM]
+      format: html_table
+      category: cross_category
+      description: TMC department contacts, helplines, emails
+    KCH:
+      id: kochi_kmc_contacts
+      url: "https://kochicorporation.lsgkerala.gov.in/en"
+      cities: [KCH]
+      format: html_table
+      category: cross_category
+      description: Kochi Corporation department contacts, helplines, emails

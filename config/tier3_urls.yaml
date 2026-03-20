@@ -1,0 +1,60 @@
+# config/tier3_urls.yaml
+# Tier 3: State Portals
+tier3_state:
+  eprocure:
+    MH: { url: "https://mahatenders.gov.in", cities: [MUM, PUN], format: html_table }
+    DL: { url: "https://govtprocurement.delhi.gov.in", cities: [DEL], format: html_table }
+    KA: { url: "https://eproc.karnataka.gov.in", cities: [BLR], format: aspnet_form }
+    TN: { url: "https://tntenders.gov.in", cities: [CHN], format: html_table }
+    TS: { url: "https://tender.telangana.gov.in", cities: [HYD], format: html_table }
+    WB: { url: "https://wbtenders.gov.in", cities: [KOL], format: html_table }
+    GJ: { url: "https://nprocure.com", cities: [AMD], format: html_table }
+    KL: { url: "https://etenders.kerala.gov.in/nicgep/app", cities: [TVM, KCH], format: html_table }
+
+  water_boards:
+    MUM: { url: "https://portal.mcgm.gov.in", cities: [MUM] }
+    DEL: { url: "https://delhijalboard.delhi.gov.in/", cities: [DEL] }
+    BLR: { url: "https://bwssb.karnataka.gov.in/", cities: [BLR] }
+    CHN: { url: "https://chennaimetrowater.tn.gov.in/", cities: [CHN] }
+    HYD: { url: "https://www.hyderabadwater.gov.in/", cities: [HYD] }
+    PUN: { url: "https://www.pmc.gov.in", cities: [PUN] }
+    KOL: { url: "https://www.kmcgov.in", cities: [KOL] }
+    AMD: { url: "https://ahmedabadcity.gov.in", cities: [AMD] }
+    KL:
+      url: "https://kwa.kerala.gov.in/en/"
+      cities: [TVM, KCH]
+      extra_urls:
+        - https://kwa.kerala.gov.in/en/major-projects/
+        - https://kwa.kerala.gov.in/en/piu-2/
+        - https://kwa.kerala.gov.in/en/sewerage-plan/
+
+  pollution_boards:
+    MH: { url: "https://mpcb.gov.in", cities: [MUM, PUN] }
+    DL: { url: "https://dpcc.delhi.gov.in/", cities: [DEL] }
+    KA: { url: "https://kspcb.karnataka.gov.in", cities: [BLR] }
+    TN: { url: "https://tnpcb.gov.in", cities: [CHN] }
+    TS: { url: "https://tspcb.cgg.gov.in", cities: [HYD] }
+    WB: { url: "https://wbpcb.gov.in", cities: [KOL] }
+    GJ: { url: "https://gpcb.gujarat.gov.in", cities: [AMD] }
+    KL: { url: "https://kspcb.kerala.gov.in/", cities: [TVM, KCH] }
+
+  pwd:
+    MH: { url: "https://mahapwd.gov.in/", cities: [MUM, PUN] }
+    DL: { url: "https://delhipwd.gov.in/", cities: [DEL] }
+    KA: { url: "https://kpwd.karnataka.gov.in/", cities: [BLR] }
+    TN: { url: "https://tnpwd.gov.in/", cities: [CHN] }
+    TS: { url: "https://roads.telangana.gov.in/", cities: [HYD] }
+    WB: { url: "https://wbpwd.gov.in/", cities: [KOL] }
+    GJ: { url: "https://rnd.gujarat.gov.in/", cities: [AMD] }
+    KL: { url: "https://www.keralapwd.gov.in/", cities: [TVM, KCH] }
+
+  discoms:
+    MUM: { url: "https://www.best.gov.in/", provider: "BEST", cities: [MUM] }
+    DEL: { url: "https://www.bsesdelhi.com/", provider: "BSES Rajdhani", cities: [DEL] }
+    BLR: { url: "https://bescom.karnataka.gov.in/", provider: "BESCOM", cities: [BLR] }
+    CHN: { url: "https://www.tnebnet.org/", provider: "TANGEDCO", cities: [CHN] }
+    HYD: { url: "https://tsspdcl.cgg.gov.in/", provider: "TSSPDCL", cities: [HYD] }
+    PUN: { url: "https://www.mahadiscom.in/", provider: "MSEDCL", cities: [PUN] }
+    KOL: { url: "https://www.cesc.co.in/", provider: "CESC", cities: [KOL] }
+    AMD: { url: "https://www.torrentpower.com/", provider: "Torrent Power", cities: [AMD] }
+    KL: { url: "https://www.kseb.in/", provider: "KSEB", cities: [TVM, KCH] }

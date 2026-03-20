@@ -1,0 +1,28 @@
+category: cross_category
+cities:
+- PUN
+description: PMC department contacts, helplines, emails
+fetch:
+  method: GET
+  type: html
+  url: https://www.pmc.gov.in
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Pune Pmc Contacts
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: pune_pmc_contacts
+validate:
+  required: []

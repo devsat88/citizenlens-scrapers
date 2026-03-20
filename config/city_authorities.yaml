@@ -1,0 +1,299 @@
+# config/city_authorities.yaml
+# Per-city authority contacts and X/Twitter handles
+# SOURCE: CitizenLens_Authority_Directory.md (compiled earlier)
+# NOTE: Handles must be verified before production use. Mark unverified ones.
+
+MUM:
+  name: Mumbai
+  municipal:
+    handle: "@mybmc"
+    helpline: "1916"
+    grievance_url: "https://portal.mcgm.gov.in/irj/portal/anonymous/qlgrievanceregistration"
+    email: "gg@mcgm.gov.in"
+  traffic:
+    handle: "@MTPHereToHelp"
+    helpline: "103"
+  police:
+    handle: "@MumbaiPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorMumbai"
+  cm_office:
+    handle: "@CMOMaharashtra"
+  water_board:
+    handle: null
+    helpline: "1916"
+    complaint_url: "https://portal.mcgm.gov.in"
+  pwd:
+    handle: "@MahaPWD"
+  railway:
+    handles: ["@CentralRly", "@WesternRly"]
+  escalation_handles:
+    state_cm: "@CMOMaharashtra"
+    state_pwd: "@MahaPWD"
+    state_urban: "@MahaUDDept"
+
+DEL:
+  name: Delhi
+  municipal:
+    handle: "@MCD_Delhi"
+    helpline: "155305"
+    grievance_url: "https://pgms.delhi.gov.in"
+    email: null
+  traffic:
+    handle: "@dtptraffic"
+    helpline: "1095"
+  police:
+    handle: "@DelhiPolice"
+    helpline: "100"
+  collector:
+    handle: null
+  cm_office:
+    handle: "@CMODelhi"
+  water_board:
+    handle: "@DJBofficial"
+    helpline: "1916"
+    complaint_url: "https://delhijalboard.delhi.gov.in/"
+  pwd:
+    handle: "@DelhiPWD"
+  railway:
+    handles: ["@NorthernRly", "@RailMinIndia"]
+  escalation_handles:
+    state_cm: "@CMODelhi"
+    state_pwd: "@DelhiPWD"
+
+BLR:
+  name: Bangalore
+  municipal:
+    handle: "@BBABORWOR"
+    helpline: "080-22660000"
+    grievance_url: "https://bbmp.gov.in/en/grievance"
+    email: null
+  traffic:
+    handle: "@BtpTraffic"
+    helpline: "080-22942222"
+  police:
+    handle: "@BlrCityPolice"
+    helpline: "100"
+  collector:
+    handle: "@DCBengaluru"
+  cm_office:
+    handle: "@CMofKarnataka"
+  water_board:
+    handle: "@baboraipurwssb"
+    helpline: "1916"
+    complaint_url: "https://bwssb.karnataka.gov.in/"
+  pwd:
+    handle: "@PWDKarnataka"
+  railway:
+    handles: ["@SWRlyOfficial"]
+  escalation_handles:
+    state_cm: "@CMofKarnataka"
+    state_pwd: "@PWDKarnataka"
+
+CHN:
+  name: Chennai
+  municipal:
+    handle: "@chenaborMunci"
+    helpline: "1913"
+    grievance_url: "https://chennaicorporation.gov.in/gcc/online-civic-services/grievance"
+    email: null
+  traffic:
+    handle: "@ChennaiTrafficP"
+    helpline: "103"
+  police:
+    handle: "@chennaborpol"
+    helpline: "100"
+  collector:
+    handle: "@collector_chn"
+  cm_office:
+    handle: "@CMOTamilnadu"
+  water_board:
+    handle: "@CMWSSB_official"
+    helpline: "044-28454040"
+    complaint_url: "https://chennaimetrowater.tn.gov.in/"
+  pwd:
+    handle: "@tnpwdofficial"
+  railway:
+    handles: ["@SouthernRly"]
+  escalation_handles:
+    state_cm: "@CMOTamilnadu"
+    state_pwd: "@tnpwdofficial"
+
+HYD:
+  name: Hyderabad
+  municipal:
+    handle: "@GHMCOnline"
+    helpline: "040-21111111"
+    grievance_url: "https://www.ghmc.gov.in/Grievance.aspx"
+    email: null
+  traffic:
+    handle: "@ABORHYDCITYPOLICE"
+    helpline: "103"
+  police:
+    handle: "@HydCityPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorHyd"
+  cm_office:
+    handle: "@TelanganaCMO"
+  water_board:
+    handle: "@HMWSSBOnline"
+    helpline: "040-23430903"
+    complaint_url: "https://www.hyderabadwater.gov.in/"
+  pwd:
+    handle: "@TRoadsBuildings"
+  railway:
+    handles: ["@SCRailwayIndia"]
+  escalation_handles:
+    state_cm: "@TelanganaCMO"
+    state_pwd: "@TRoadsBuildings"
+
+PUN:
+  name: Pune
+  municipal:
+    handle: "@PMCPune"
+    helpline: "020-25501000"
+    grievance_url: "https://www.pmc.gov.in/en/grievance-redressal"
+    email: "pmc@punecorporation.org"
+  traffic:
+    handle: "@PuneCityTraffic"
+    helpline: "103"
+  police:
+    handle: "@PuneCityPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorPune"
+  cm_office:
+    handle: "@CMOMaharashtra"
+  water_board:
+    handle: null
+    helpline: "020-25501000"
+    complaint_url: "https://www.pmc.gov.in"
+  pwd:
+    handle: "@MahaPWD"
+  railway:
+    handles: ["@CentralRly"]
+  escalation_handles:
+    state_cm: "@CMOMaharashtra"
+    state_pwd: "@MahaPWD"
+
+KOL:
+  name: Kolkata
+  municipal:
+    handle: "@KMCKolkata"
+    helpline: "1800-345-0110"
+    grievance_url: "https://www.kmcgov.in/KMCPortal/jsp/Online_grievance.jsp"
+    email: null
+  traffic:
+    handle: "@KolkataTraffic"
+    helpline: "103"
+  police:
+    handle: "@KolkataPolice"
+    helpline: "100"
+  collector:
+    handle: "@KolkataDM"
+  cm_office:
+    handle: "@MamataOfficial"
+  water_board:
+    handle: null
+    helpline: "033-22861212"
+    complaint_url: "https://www.kmcgov.in"
+  pwd:
+    handle: "@wbpwdofficial"
+  railway:
+    handles: ["@EasternRly", "@SERailway"]
+  escalation_handles:
+    state_cm: "@MamataOfficial"
+
+AMD:
+  name: Ahmedabad
+  municipal:
+    handle: "@AMCAhmedabad"
+    helpline: "079-25391811"
+    grievance_url: "https://ahmedabadcity.gov.in/portal/jsp/Static_pages/grievance.jsp"
+    email: null
+  traffic:
+    handle: "@AhmedabadPolice"
+    helpline: "103"
+  police:
+    handle: "@AhsaborPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorAhmd"
+  cm_office:
+    handle: "@CMOGuj"
+  water_board:
+    handle: null
+    helpline: "079-25391811"
+    complaint_url: "https://ahmedabadcity.gov.in"
+  pwd:
+    handle: "@RnBGujarat"
+  railway:
+    handles: ["@WesternRly"]
+  escalation_handles:
+    state_cm: "@CMOGuj"
+    state_pwd: "@RnBGujarat"
+
+TVM:
+  name: Thiruvananthapuram
+  municipal:
+    handle: "@TvmCorporation"
+    helpline: "1800-425-6882"
+    grievance_url: "https://tmc.lsgkerala.gov.in/en/public-grievance-cell"
+    email: "tvpmcorpn@gmail.com"
+  traffic:
+    handle: "@KeralaPolice"
+    helpline: "103"
+  police:
+    handle: "@KeralaPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorTVM"
+  cm_office:
+    handle: "@CMOKerala"
+  water_board:
+    handle: "@KWA_Official"
+    helpline: "1916"
+    complaint_url: "https://kwa.kerala.gov.in/en/"
+  pwd:
+    handle: "@KeralaPWD"
+  railway:
+    handles: ["@SouthernRly"]
+  escalation_handles:
+    state_cm: "@CMOKerala"
+    state_pwd: "@KeralaPWD"
+    state_lsgd: "@LSGDKerala"
+
+KCH:
+  name: Kochi
+  municipal:
+    handle: "@KochiCorporation"
+    helpline: "0484-2369007"
+    grievance_url: "https://kochicorporation.lsgkerala.gov.in/en/form/public-grievance-cellnew"
+    email: "cochinmayor@gmail.com"
+  traffic:
+    handle: "@KeralaPolice"
+    helpline: "103"
+  police:
+    handle: "@KeralaPolice"
+    helpline: "100"
+  collector:
+    handle: "@CollectorEKM"
+  cm_office:
+    handle: "@CMOKerala"
+  water_board:
+    handle: "@KWA_Official"
+    helpline: "1916"
+    complaint_url: "https://kwa.kerala.gov.in/en/"
+  pwd:
+    handle: "@KeralaPWD"
+  railway:
+    handles: ["@SouthernRly"]
+  kochi_metro:
+    handle: "@KochiMetro"
+    url: "https://kochimetro.org/"
+  escalation_handles:
+    state_cm: "@CMOKerala"
+    state_pwd: "@KeralaPWD"
+    state_lsgd: "@LSGDKerala"

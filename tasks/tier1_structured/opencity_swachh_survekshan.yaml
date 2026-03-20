@@ -1,0 +1,27 @@
+category: garbage
+cities: all
+description: Swachh Survekshan city rankings as CSV
+fetch:
+  method: GET
+  type: csv
+  url: https://data.opencity.in/dataset/swachh-survekshan-ss-results
+load:
+  table: garbage_contractors
+  unique_key:
+  - city_code
+  - contractor_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Opencity Swachh Survekshan
+parse:
+  columns: {}
+  type: csv
+refresh_frequency: annual
+tier: 1
+transform:
+  _add_fields:
+    category: garbage
+    source_portal: opencity_swachh_survekshan
+validate:
+  required: []

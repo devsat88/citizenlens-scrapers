@@ -1,0 +1,27 @@
+category: cross_category
+cities: all
+description: City budget data, road statistics
+fetch:
+  method: GET
+  type: csv
+  url: https://data.opencity.in/
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Opencity Budgets
+parse:
+  columns: {}
+  type: csv
+refresh_frequency: annual
+tier: 1
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: opencity_budgets
+validate:
+  required: []

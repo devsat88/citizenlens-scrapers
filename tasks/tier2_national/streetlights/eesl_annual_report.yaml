@@ -1,0 +1,27 @@
+category: streetlights
+cities: all
+description: City-wise LED installation data
+fetch:
+  method: GET
+  type: pdf
+  url: https://eeslindia.org/en/annual-reports/
+load:
+  table: streetlight_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Eesl Annual Report
+parse:
+  columns: {}
+  type: pdf_table
+refresh_frequency: annual
+tier: 2
+transform:
+  _add_fields:
+    category: streetlights
+    source_portal: eesl_annual_report
+validate:
+  required: []

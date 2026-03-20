@@ -1,0 +1,28 @@
+category: cross_category
+cities:
+- CHN
+description: GCC ward councillors and representatives
+fetch:
+  method: GET
+  type: html
+  url: https://chennaicorporation.gov.in
+load:
+  table: smart_city_projects
+  unique_key:
+  - city_code
+  - project_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Chennai Gcc Wards
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: cross_category
+    source_portal: chennai_gcc_wards
+validate:
+  required: []

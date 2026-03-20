@@ -1,0 +1,138 @@
+# config/tier2_urls.yaml
+# Tier 2: National Portals
+tier2_national:
+  # ROADS
+  - id: pmgsy_omms
+    url: https://omms.nic.in/
+    format: html_table
+    description: Rural road projects with contractor data
+    cities: all
+    category: roads
+    refresh: monthly
+    per_state: true  # One task YAML per state
+
+  - id: nhai_projects
+    url: https://nhai.gov.in/road-information
+    format: html_table
+    description: National highway projects
+    cities: all
+    category: roads
+    refresh: monthly
+
+  - id: cppp_eprocure
+    url: https://eprocure.gov.in/
+    format: html_table
+    description: Central govt road/infra tenders
+    cities: all
+    category: roads
+    refresh: weekly
+
+  - id: gem_portal
+    url: https://gem.gov.in/
+    format: html_table
+    description: Central govt procurement orders
+    cities: all
+    category: cross_category
+    refresh: weekly
+
+  # WATER
+  - id: jal_jeevan_mission
+    url: https://ejalshakti.gov.in/jjmreport/
+    format: json_api  # AJAX calls return JSON
+    description: Water projects, household connections, spending
+    cities: all
+    category: water
+    refresh: monthly
+    per_state: true
+
+  - id: cpcb_water_quality
+    url: https://cpcb.nic.in/water-quality/
+    format: pdf_table
+    description: Water quality monitoring data
+    cities: all
+    category: water
+    refresh: quarterly
+
+  - id: amrut_portal
+    url: https://amrut.gov.in/
+    format: html_table
+    description: Urban water supply & sewerage projects
+    cities: all
+    category: water
+    refresh: quarterly
+
+  # GARBAGE
+  - id: sbm_urban
+    url: https://sbm.gov.in/
+    format: html_table
+    description: ODF status, waste processing data by city
+    cities: all
+    category: garbage
+    refresh: quarterly
+
+  # RAILWAYS
+  - id: station_cleanliness
+    url: https://data.gov.in/  # Or direct QCI PDF download
+    format: pdf_table
+    description: Station cleanliness rankings
+    cities: all
+    category: railways
+    refresh: annual
+
+  - id: irsdc_projects
+    url: https://irsdc.in/
+    format: html_table
+    description: Station redevelopment projects
+    cities: all
+    category: railways
+    refresh: quarterly
+
+  - id: amrit_bharat_stations
+    url: https://amritbharatstations.gov.in/
+    format: html_table
+    description: Amrit Bharat station modernization
+    cities: all
+    category: railways
+    refresh: quarterly
+
+  - id: rail_madad
+    url: https://railmadad.indianrailways.gov.in/
+    format: html_table
+    description: Complaint resolution stats
+    cities: all
+    category: railways
+    refresh: monthly
+
+  # STREETLIGHTS
+  - id: eesl_slnp
+    url: https://www.eeslindia.org/en/national-streetlighting-programme/
+    format: html_table
+    description: LED streetlight programme by city
+    cities: all
+    category: streetlights
+    refresh: quarterly
+
+  - id: eesl_annual_report
+    url: https://eeslindia.org/en/annual-reports/
+    format: pdf_table
+    description: City-wise LED installation data
+    cities: all
+    category: streetlights
+    refresh: annual
+
+  # CROSS-CATEGORY
+  - id: smartcities_gov
+    url: https://smartcities.gov.in/
+    format: html_table
+    description: Per-city project lists (all categories)
+    cities: [DEL, BLR, CHN, HYD, PUN, AMD, TVM, KCH]
+    category: cross_category
+    refresh: monthly
+
+  - id: ncrb_accident
+    url: https://ncrb.gov.in/
+    format: pdf_table
+    description: Accidental deaths report (road accidents by city)
+    cities: all
+    category: cross_category
+    refresh: annual

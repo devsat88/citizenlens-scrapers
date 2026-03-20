@@ -1,0 +1,28 @@
+category: garbage
+cities:
+- KCH
+description: Kochi Corporation solid waste management contractor data
+fetch:
+  method: GET
+  type: html
+  url: https://kochicorporation.lsgkerala.gov.in/en
+load:
+  table: garbage_contractors
+  unique_key:
+  - city_code
+  - contractor_name
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Kochi Kmc Swm
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: monthly
+tier: 4
+transform:
+  _add_fields:
+    category: garbage
+    source_portal: kochi_kmc_swm
+validate:
+  required: []

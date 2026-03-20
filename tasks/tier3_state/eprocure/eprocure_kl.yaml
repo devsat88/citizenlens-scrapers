@@ -1,0 +1,29 @@
+category: roads
+cities:
+- TVM
+- KCH
+description: State eProcurement portal for Kerala
+fetch:
+  method: GET
+  type: html
+  url: https://etenders.kerala.gov.in/nicgep/app
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: eProcure Kerala
+parse:
+  columns: {}
+  type: html_table
+refresh_frequency: weekly
+tier: 3
+transform:
+  _add_fields:
+    category: roads
+    source_portal: eprocure_kl
+validate:
+  required: []

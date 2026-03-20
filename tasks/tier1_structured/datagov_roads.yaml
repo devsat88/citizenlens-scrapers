@@ -1,0 +1,27 @@
+category: roads
+cities: all
+description: Road length statistics, PMGSY data
+fetch:
+  method: GET
+  type: api
+  url: https://data.gov.in/
+load:
+  table: road_projects
+  unique_key:
+  - city_code
+  - project_id
+  - source_portal
+  upload_raw: true
+  upsert: true
+name: Datagov Roads
+parse:
+  columns: {}
+  type: json
+refresh_frequency: quarterly
+tier: 1
+transform:
+  _add_fields:
+    category: roads
+    source_portal: datagov_roads
+validate:
+  required: []
