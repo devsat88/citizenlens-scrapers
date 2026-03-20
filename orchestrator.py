@@ -89,7 +89,14 @@ def _apply_transforms(records: list[dict], transform_config: dict) -> list[dict]
     """Apply field-level transformers. Warns and skips if a module is missing."""
     if not transform_config or not records:
         return records
+
+    add_fields: dict = transform_config.get("_add_fields", {})
+    if add_fields:
+        records = [{**add_fields, **r} for r in records]
+
     for field, transformer_name in transform_config.items():
+        if field == "_add_fields":
+            continue
         try:
             mod = importlib.import_module(f"transformers.{transformer_name}")
             fn = getattr(mod, "transform")

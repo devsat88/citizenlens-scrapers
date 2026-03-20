@@ -25,10 +25,11 @@ def _collect_outputs(output_dir: Path) -> list[dict]:
     """Walk tier directories and collect all JSON output files."""
     entries: list[dict] = []
     for json_file in sorted(output_dir.rglob("*.json")):
-        if json_file.name == "data_gaps.json":
+        if json_file.name in ("data_gaps.json",) or json_file.name.endswith(".meta.json"):
             continue
         try:
-            records: list[dict] = json.loads(json_file.read_text(encoding="utf-8"))
+            parsed = json.loads(json_file.read_text(encoding="utf-8"))
+            records: list[dict] = parsed if isinstance(parsed, list) else []
         except Exception:
             records = []
 
