@@ -1,0 +1,227 @@
+cities:
+  MUM:
+    name: Mumbai
+    state: Maharashtra
+    state_code: MH
+    municipal_body: BMC
+    municipal_url: https://portal.mcgm.gov.in
+    grievance_url: https://portal.mcgm.gov.in/irj/portal/anonymous/qlgrievanceregistration
+    ward_count: 24
+    eprocure_url: https://mahatenders.gov.in
+    water_board: MCGM Hydraulic Engineering
+    water_board_url: https://portal.mcgm.gov.in
+    electricity_provider: BEST / Adani / Tata Power
+    discom_url: https://www.best.gov.in/
+    transport_body: BEST
+    smart_city: false  # Mumbai withdrew from Smart Cities Mission
+    smart_city_spv_url: null
+    pwd_url: https://mahapwd.gov.in/
+    pcb_url: https://mpcb.gov.in
+    railway_division: Central Railway / Western Railway
+    key_stations: [CSMT, BCT, DR, ADH, BVI, TNA]
+    station_names: [Chhatrapati Shivaji Terminus, Mumbai Central, Dadar, Andheri, Borivali, Thane]
+
+  DEL:
+    name: Delhi
+    state: Delhi
+    state_code: DL
+    municipal_body: MCD
+    municipal_url: https://mcdonline.nic.in
+    grievance_url: https://pgms.delhi.gov.in
+    ward_count: 250
+    eprocure_url: https://govtprocurement.delhi.gov.in
+    water_board: Delhi Jal Board
+    water_board_url: https://delhijalboard.delhi.gov.in/
+    electricity_provider: BSES Rajdhani / BSES Yamuna / Tata Power DDL
+    discom_url: https://www.bsesdelhi.com/
+    transport_body: DTC
+    smart_city: true
+    smart_city_spv_url: https://delhismartcity.in/
+    pwd_url: https://delhipwd.gov.in/
+    pcb_url: https://dpcc.delhi.gov.in/
+    railway_division: Northern Railway
+    key_stations: [NDLS, DLI, NZM, ANVT]
+    station_names: [New Delhi, Delhi Junction, Nizamuddin, Anand Vihar]
+
+  BLR:
+    name: Bangalore
+    state: Karnataka
+    state_code: KA
+    municipal_body: BBMP
+    municipal_url: https://bbmp.gov.in
+    grievance_url: https://bbmp.gov.in/en/grievance
+    ward_count: 198
+    eprocure_url: https://eproc.karnataka.gov.in
+    water_board: BWSSB
+    water_board_url: https://bwssb.karnataka.gov.in/
+    electricity_provider: BESCOM
+    discom_url: https://bescom.karnataka.gov.in/
+    transport_body: BMTC
+    smart_city: true
+    smart_city_spv_url: https://bengaluruscl.com/
+    pwd_url: https://kpwd.karnataka.gov.in/
+    pcb_url: https://kspcb.karnataka.gov.in
+    railway_division: South Western Railway
+    key_stations: [SBC, YPR, BNC]
+    station_names: [KSR Bengaluru, Yeshwanthpur, Cantonment]
+
+  CHN:
+    name: Chennai
+    state: Tamil Nadu
+    state_code: TN
+    municipal_body: GCC
+    municipal_url: https://chennaicorporation.gov.in
+    grievance_url: https://chennaicorporation.gov.in/gcc/online-civic-services/grievance
+    ward_count: 200
+    eprocure_url: https://tntenders.gov.in
+    water_board: CMWSSB
+    water_board_url: https://chennaimetrowater.tn.gov.in/
+    electricity_provider: TANGEDCO
+    discom_url: https://www.tnebnet.org/
+    transport_body: MTC
+    smart_city: true
+    smart_city_spv_url: https://chennaismartcity.in/
+    pwd_url: https://tnpwd.gov.in/
+    pcb_url: https://tnpcb.gov.in
+    railway_division: Southern Railway
+    key_stations: [MAS, MS, TBM]
+    station_names: [Chennai Central, Chennai Egmore, Tambaram]
+
+  HYD:
+    name: Hyderabad
+    state: Telangana
+    state_code: TS
+    municipal_body: GHMC
+    municipal_url: https://www.ghmc.gov.in
+    grievance_url: https://www.ghmc.gov.in/Grievance.aspx
+    ward_count: 150
+    eprocure_url: https://tender.telangana.gov.in
+    water_board: HMWSSB
+    water_board_url: https://www.hyderabadwater.gov.in/
+    electricity_provider: TSSPDCL
+    discom_url: https://tsspdcl.cgg.gov.in/
+    transport_body: TSRTC
+    smart_city: true
+    smart_city_spv_url: null  # Via smartcities.gov.in
+    pwd_url: https://roads.telangana.gov.in/
+    pcb_url: https://tspcb.cgg.gov.in
+    railway_division: South Central Railway
+    key_stations: [SC, HYB, KCG]
+    station_names: [Secunderabad, Hyderabad Deccan, Kacheguda]
+
+  PUN:
+    name: Pune
+    state: Maharashtra
+    state_code: MH
+    municipal_body: PMC
+    municipal_url: https://www.pmc.gov.in
+    grievance_url: https://www.pmc.gov.in/en/grievance-redressal
+    ward_count: 41
+    eprocure_url: https://mahatenders.gov.in
+    water_board: PMC Water Supply
+    water_board_url: https://www.pmc.gov.in
+    electricity_provider: MSEDCL
+    discom_url: https://www.mahadiscom.in/
+    transport_body: PMPML
+    smart_city: true
+    smart_city_spv_url: https://punesmartcity.in/
+    pwd_url: https://mahapwd.gov.in/
+    pcb_url: https://mpcb.gov.in
+    railway_division: Central Railway
+    key_stations: [PUNE, SVJ, HDP]
+    station_names: [Pune Junction, Shivajinagar, Hadapsar]
+
+  KOL:
+    name: Kolkata
+    state: West Bengal
+    state_code: WB
+    municipal_body: KMC
+    municipal_url: https://www.kmcgov.in
+    grievance_url: https://www.kmcgov.in/KMCPortal/jsp/Online_grievance.jsp
+    ward_count: 144
+    eprocure_url: https://wbtenders.gov.in
+    water_board: KMC Water Supply
+    water_board_url: https://www.kmcgov.in
+    electricity_provider: CESC
+    discom_url: https://www.cesc.co.in/
+    transport_body: WBTC / SBSTC
+    smart_city: false  # Kolkata withdrew from Smart Cities Mission
+    smart_city_spv_url: null
+    pwd_url: https://wbpwd.gov.in/
+    pcb_url: https://wbpcb.gov.in
+    railway_division: Eastern Railway / South Eastern Railway
+    key_stations: [HWH, SDAH, KOAA]
+    station_names: [Howrah, Sealdah, Kolkata]
+
+  AMD:
+    name: Ahmedabad
+    state: Gujarat
+    state_code: GJ
+    municipal_body: AMC
+    municipal_url: https://ahmedabadcity.gov.in
+    grievance_url: https://ahmedabadcity.gov.in/portal/jsp/Static_pages/grievance.jsp
+    ward_count: 48
+    eprocure_url: https://nprocure.com
+    water_board: AMC Water Supply
+    water_board_url: https://ahmedabadcity.gov.in
+    electricity_provider: Torrent Power
+    discom_url: https://www.torrentpower.com/
+    transport_body: AMTS / BRTS
+    smart_city: true
+    smart_city_spv_url: null  # Via smartcities.gov.in
+    pwd_url: https://rnd.gujarat.gov.in/
+    pcb_url: https://gpcb.gujarat.gov.in
+    railway_division: Western Railway
+    key_stations: [ADI, GNKP]
+    station_names: [Ahmedabad Junction, Gandhinagar Capital]
+
+  TVM:
+    name: Thiruvananthapuram
+    state: Kerala
+    state_code: KL
+    municipal_body: TMC
+    municipal_url: https://tmc.lsgkerala.gov.in/en/home
+    grievance_url: https://tmc.lsgkerala.gov.in/en/public-grievance-cell
+    ward_count: 101
+    eprocure_url: https://etenders.kerala.gov.in/nicgep/app
+    water_board: KWA
+    water_board_url: https://kwa.kerala.gov.in/en/
+    electricity_provider: KSEB
+    discom_url: https://www.kseb.in/
+    transport_body: KSRTC
+    smart_city: true
+    smart_city_spv_url: https://www.smartcitytvm.in/
+    pwd_url: https://www.keralapwd.gov.in/
+    pcb_url: https://kspcb.kerala.gov.in/
+    railway_division: Southern Railway (Thiruvananthapuram Division)
+    key_stations: [TVC, KCVL]
+    station_names: [Thiruvananthapuram Central, Kochuveli]
+    toll_free: "1800 425 6882"
+    lsgd_url: https://lsgkerala.gov.in/
+    lsgd_tenders_url: https://lsgkerala.gov.in/en/lsgd-related-tenders
+
+  KCH:
+    name: Kochi
+    state: Kerala
+    state_code: KL
+    municipal_body: KMC (Kochi)
+    municipal_url: https://kochicorporation.lsgkerala.gov.in/en
+    alt_municipal_url: https://cochinmunicipalcorporation.kerala.gov.in/
+    grievance_url: https://kochicorporation.lsgkerala.gov.in/en/form/public-grievance-cellnew
+    my_kochi_app: https://mykochi.lsgkerala.gov.in/
+    ward_count: 74
+    eprocure_url: https://etenders.kerala.gov.in/nicgep/app
+    water_board: KWA
+    water_board_url: https://kwa.kerala.gov.in/en/
+    electricity_provider: KSEB
+    discom_url: https://www.kseb.in/
+    transport_body: KSRTC / KMRL (Kochi Metro)
+    kochi_metro_url: https://kochimetro.org/
+    smart_city: true
+    smart_city_spv_url: https://csml.co.in/
+    pwd_url: https://www.keralapwd.gov.in/
+    pcb_url: https://kspcb.kerala.gov.in/
+    railway_division: Southern Railway
+    key_stations: [ERS, ERN, AWY]
+    station_names: [Ernakulam Junction, Ernakulam Town, Aluva]
+    lsgd_url: https://lsgkerala.gov.in/
